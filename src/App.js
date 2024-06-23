@@ -89,15 +89,13 @@ function App() {
                         className="flex flex-col items-center mx-2 md:flex-row md:items-center md:mx-8 lg:items-center lg:justify-center mt-16 lg:mt-0 lg:flex-col lg:text-center">
     <span
         className="h-12 w-12 p-4 rounded-full border-2 border-purple-900 flex justify-center items-center lg:text-center">
-        <p className="font-abhaya text-xl">1</p>
+        <p className="font-abhaya text-xl">2</p>
     </span>
                         <div
                             className="flex flex-col items-center md:items-start md:ml-4 lg:text-center lg:justify-center lg:items-center">
-                            <h2 className="font-abhaya text-4xl mt-4 lg:mt-0 text-purple-900 lg:text-center">Actionable
-                                insight</h2>
+                            <h2 className="font-abhaya text-4xl mt-4 lg:mt-0 text-purple-900 lg:text-center">Data-driven decisions</h2>
                             <p className="text-center md:text-left font-manrope-regular mt-4 text-purple-900 lg:text-center">
-                                Optimize your products, improve customer satisfaction and stay ahead of the competition
-                                with our product data analytics.
+                                Make data-driven decisions with our product data analytics. Our AI-generated reports help you unlock insights hidden in your product data.
                             </p>
                         </div>
                     </div>
@@ -105,15 +103,13 @@ function App() {
                         className="flex flex-col items-center mx-2 md:flex-row md:items-center md:mx-8 lg:items-center lg:justify-center mt-16 lg:mt-0 lg:flex-col lg:text-center">
     <span
         className="h-12 w-12 p-4 rounded-full border-2 border-purple-900 flex justify-center items-center lg:text-center">
-        <p className="font-abhaya text-xl">1</p>
+        <p className="font-abhaya text-xl">3</p>
     </span>
                         <div
                             className="flex flex-col items-center md:items-start md:ml-4 lg:text-center lg:justify-center lg:items-center">
-                            <h2 className="font-abhaya text-4xl mt-4 lg:mt-0 text-purple-900 lg:text-center">Actionable
-                                insight</h2>
+                            <h2 className="font-abhaya text-4xl mt-4 lg:mt-0 text-purple-900 lg:text-center">Always affordable</h2>
                             <p className="text-center md:text-left font-manrope-regular mt-4 text-purple-900 lg:text-center">
-                                Optimize your products, improve customer satisfaction and stay ahead of the competition
-                                with our product data analytics.
+                                Always affordable pricing that scales with your business. Get top-quality product data analytics services without hidden costs or unexpected fees.
                             </p>
                         </div>
                     </div>
