@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/manrope-bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'abhaya';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/abhaya-regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'manrope-regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/manrope-regular.ttf) format('truetype');
+}
