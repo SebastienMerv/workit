@@ -1,4 +1,43 @@
+import React, {useState, useEffect} from 'react';
+
 function App() {
+    const [installPromptEvent, setInstallPromptEvent] = useState(null);
+
+    useEffect(() => {
+        // Fonction pour gérer l'événement 'beforeinstallprompt'
+        const handleBeforeInstallPrompt = (event) => {
+            // Empêcher l'invite automatique
+            event.preventDefault();
+            // Sauvegarder l'événement pour une utilisation ultérieure
+            setInstallPromptEvent(event);
+        };
+
+        // Ajouter l'écouteur d'événement sur 'beforeinstallprompt'
+        window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+
+        // Fonction de nettoyage pour retirer l'écouteur d'événement
+        return () => {
+            window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+        };
+    }, []);
+
+    const handleLearnMoreClick = () => {
+        // Vérifier si l'événement est enregistré et non déjà utilisé
+        if (installPromptEvent) {
+            // Déclencher l'invite d'installation
+            installPromptEvent.prompt();
+            // Gérer le choix de l'utilisateur
+            installPromptEvent.userChoice.then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                    console.log('User accepted the A2HS prompt');
+                } else {
+                    console.log('User dismissed the A2HS prompt');
+                }
+                // Réinitialiser l'événement après le traitement
+                setInstallPromptEvent(null);
+            });
+        }
+    };
     return (
         <div className="App">
             <header className="bg-purple-900 relative pb-32 rounded-bl-[100%_10%] rounded-br-[100%_10%] ">
@@ -10,13 +49,16 @@ function App() {
                 </div>
 
                 <div className="mt-16 flex items-center mx-4 justify-center">
-                    <h1 className="text-white text-5xl text-center font-abhaya font-light text-center w-96">Data <span className="underline decoration-green-500">tailored</span> to
+                    <h1 className="text-white text-5xl text-center font-abhaya font-light text-center w-96">Data <span
+                        className="underline decoration-green-500">tailored</span> to
                         your
                         needs.</h1>
                 </div>
 
                 <div className="mt-16 flex items-center justify-center">
-                    <a href="#" className="px-4 py-4 bg-green-500 text-body font-bold">Learn more</a>
+                    <button onClick={handleLearnMoreClick} className="px-4 py-4 bg-green-500 text-body font-bold">
+                        Learn more
+                    </button>
                 </div>
 
                 <div className="mt-16 flex items-center justify-center">
