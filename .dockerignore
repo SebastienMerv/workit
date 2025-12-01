@@ -5,6 +5,5 @@ npm-debug.log
 .github
 .vscode
 .idea
-dist
 *.md
 .DS_Store
